@@ -13,14 +13,14 @@ class MyWindow:
         # txt = Text(master, font=('Courier New', 10), bg='#9C9C9C',width=32, height=12)
         # txt.place(x=64,y=256)
         self.cry=StringVar()
-
         self.ent=Entry(master, font=('Courier New', 10), bg='#9C9C9C',textvariable=self.cry)
-        self.ent.place(x=64,y=128,height=35)
+        self.ent.place(x=176,y=220,height=35)
         # txt.insert(entg,'insert')
         self.lab=Label(master,text='CryptoParser',bg='#EE751C',font=('Impact',40),justify='center')
         self.lab.place(x=112,y=12)
         self.but=Button(master, text='Парсить!', bg='#2FA07B', fg='#E8DD2D',command=self.click)
-        self.but.place(x=64, y=170)
+        self.but.place(x=226,y=290)
+
 
     def get_info(self):
         request = requests.get(url='https://api.coinmarketcap.com/data-api/v3/cryptocurrency/listing?start=1&limit=10000').json()
