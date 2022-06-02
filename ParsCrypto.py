@@ -34,7 +34,7 @@ class MyWindow:
                     #       f'Цена - {price}'
                     #       )
                 total = f'Название - {name}\nИнициалы - {sym}\nЦена - {round(price, 2)}'
-                return f'Название - {name}\nИнициалы - {sym}\nЦена - {round(price,2)}$'
+                return f"Название - {name}\nИнициалы - {sym}\nЦена - {round(price,2)}$\nИзменения за последний час: {round(item['quotes'][0]['percentChange1h'],2)}%\nИзменения за 24 часа: {round(item['quotes'][0]['percentChange24h'],2)}%"
                 # self.lab=Label(self.master, text='total')
                 # self.lab.place(x=0,y=0)
             else:
