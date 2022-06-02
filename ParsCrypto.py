@@ -1,7 +1,7 @@
 from tkinter import *
 import requests
 from tkinter import messagebox
-
+from PIL import Image, ImageTk
 class MyWindow:
     def __init__(self,master):
         self.master = master
@@ -16,6 +16,15 @@ class MyWindow:
         self.ent=Entry(master, font=('Courier New', 10), bg='#9C9C9C',textvariable=self.cry)
         self.ent.place(x=176,y=220,height=35)
         # txt.insert(entg,'insert')
+        self.img = ImageTk.PhotoImage(Image.open('Bitcoin.png'))
+        self.img1 = ImageTk.PhotoImage(Image.open('Ethereum.png'))
+        self.img2 = ImageTk.PhotoImage(Image.open('Tether.png'))
+        self.lab1=Label(master, image=self.img, bg='#D3DED2', bd=0)
+        self.lab1.place(x=193,y=330)
+        self.lab2 = Label(master, image=self.img1, bg='#D3DED2', bd=0)
+        self.lab2.place(x=46, y=370)
+        self.lab1 = Label(master, image=self.img2, bg='#D3DED2', bd=0)
+        self.lab1.place(x=340, y=370)
         self.lab=Label(master,text='CryptoParser',bg='#EE751C',font=('Impact',40),justify='center')
         self.lab.place(x=112,y=12)
         self.but=Button(master, text='Парсить!', bg='#2FA07B', fg='#E8DD2D',command=self.click)
